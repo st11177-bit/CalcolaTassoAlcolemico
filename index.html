@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcolatore Tasso Alcolico</title>
+    <link rel="icon" href="wine.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
@@ -16,11 +17,6 @@
                 <p class="eyebrow">Stima il tuo tasso alcolemico</p>
                 <h1>Calcolo del Tasso Alcolico</h1>
                 <p>Inserisci peso e bevande consumate per una stima rapida e intuitiva.</p>
-            </div>
-            <div class="hero-graphic">
-                <div class="glass">
-                    <div class="liquid"></div>
-                </div>
             </div>
         </header>
 
@@ -70,18 +66,23 @@
                 <div id="drinksList" class="drinks-list"></div>
             </section>
 
-            <section class="card result-card">
-                <button id="calculate">Calcola</button>
-                <div class="result-panel">
-                    <div class="result-item">
-                        <span>Valore stimato</span>
-                        <strong id="bacValue">0.00 ‰</strong>
-                    </div>
-                    <p class="result-note" id="bacNote">Il risultato è una stima. Il valore effettivo dipende da molti
-                        fattori.</p>
-                </div>
-            </section>
+
+            <button id="calculate">Calcola</button>
+
         </main>
+
+        <div id="resultOverlay" class="result-overlay hidden">
+            <div class="overlay-card">
+                <button id="closeOverlay" class="overlay-close" aria-label="Chiudi finestra">×</button>
+                <h2>Risultato del test</h2>
+                <div class="overlay-value">
+                    <span>Valore stimato</span>
+                    <strong id="overlayBacValue">0.00 ‰</strong>
+                </div>
+                <p id="overlayBacNote">Il risultato è una stima. Il valore effettivo dipende da molti fattori.</p>
+                <button id="overlayOk" class="btn-add-drink">Chiudi</button>
+            </div>
+        </div>
 
         <footer class="footer">
             <p>Nota: questo strumento fornisce solo una stima indicativa. Non sostituisce il giudizio professionale.</p>

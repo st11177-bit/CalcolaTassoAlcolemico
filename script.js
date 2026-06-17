@@ -8,6 +8,11 @@ const drinksList = document.getElementById('drinksList');
 const calculateButton = document.getElementById('calculate');
 const bacValue = document.getElementById('bacValue');
 const bacNote = document.getElementById('bacNote');
+const resultOverlay = document.getElementById('resultOverlay');
+const closeOverlay = document.getElementById('closeOverlay');
+const overlayOk = document.getElementById('overlayOk');
+const overlayBacValue = document.getElementById('overlayBacValue');
+const overlayBacNote = document.getElementById('overlayBacNote');
 
 const categoryFiles = {
     vino: 'wine.json',
@@ -114,18 +119,37 @@ function calculateBAC() {
 
     const bac = totalAlcoholGrams / (weight * ratio);
     const bacRounded = Math.max(0, bac).toFixed(2);
-
-    bacValue.textContent = `${bacRounded} ‰`;
+    let noteText = '';
 
     if (bac >= 0.5) {
-        bacNote.textContent = 'Attenzione: sei sopra il limite legale in molti paesi. Evita di guidare.';
+        noteText = 'Attenzione: sei sopra il limite legale in molti paesi. Evita di guidare.';
     } else if (bac >= 0.2) {
-        bacNote.textContent = 'Moderato. Il tuo stato potrebbe influenzare coordinazione e attenzione.';
+        noteText = 'Moderato. Il tuo stato potrebbe influenzare coordinazione e attenzione.';
     } else if (bac > 0) {
-        bacNote.textContent = 'Basso. Ricorda che si tratta di una stima approssimativa.';
+        noteText = 'Basso. Ricorda che si tratta di una stima approssimativa.';
     } else {
-        bacNote.textContent = 'Nessuna bevanda aggiunta. Il risultato è una stima.';
+        noteText = 'Nessuna bevanda aggiunta. Il risultato è una stima.';
     }
+
+    if (bacValue) {
+        bacValue.textContent = `${bacRounded} ‰`;
+    }
+
+    if (bacNote) {
+        bacNote.textContent = noteText;
+    }
+
+    showOverlay(bacRounded, noteText);
+}
+
+function showOverlay(bacValueText, noteText) {
+    overlayBacValue.textContent = `${bacValueText} ‰`;
+    overlayBacNote.textContent = noteText;
+    resultOverlay.classList.remove('hidden');
+}
+
+function closeOverlayWindow() {
+    resultOverlay.classList.add('hidden');
 }
 
 categorySelect.addEventListener('change', (e) => {
@@ -137,3 +161,5 @@ quantityInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') addDrink();
 });
 calculateButton.addEventListener('click', calculateBAC);
+closeOverlay.addEventListener('click', closeOverlayWindow);
+overlayOk.addEventListener('click', closeOverlayWindow);
