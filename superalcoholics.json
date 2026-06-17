@@ -1,0 +1,42 @@
+[
+  { "nome": "vodka", "tasso_alcolico": 0.40 },
+  { "nome": "gin", "tasso_alcolico": 0.40 },
+  { "nome": "rum_bianco", "tasso_alcolico": 0.40 },
+  { "nome": "rum_scuro", "tasso_alcolico": 0.40 },
+  { "nome": "rum_agricolo", "tasso_alcolico": 0.45 },
+
+  { "nome": "whisky", "tasso_alcolico": 0.40 },
+  { "nome": "bourbon", "tasso_alcolico": 0.45 },
+  { "nome": "scotch", "tasso_alcolico": 0.40 },
+  { "nome": "irish_whiskey", "tasso_alcolico": 0.40 },
+
+  { "nome": "tequila_blanco", "tasso_alcolico": 0.40 },
+  { "nome": "tequila_reposado", "tasso_alcolico": 0.40 },
+  { "nome": "tequila_anejo", "tasso_alcolico": 0.40 },
+
+  { "nome": "mezcal", "tasso_alcolico": 0.45 },
+
+  { "nome": "cognac", "tasso_alcolico": 0.40 },
+  { "nome": "brandy", "tasso_alcolico": 0.40 },
+  { "nome": "armagnac", "tasso_alcolico": 0.40 },
+
+  { "nome": "grappa", "tasso_alcolico": 0.40 },
+  { "nome": "grappa_invecchiata", "tasso_alcolico": 0.42 },
+
+  { "nome": "sambuca", "tasso_alcolico": 0.42 },
+  { "nome": "amaretto", "tasso_alcolico": 0.28 },
+  { "nome": "limoncello", "tasso_alcolico": 0.30 },
+  { "nome": "amaro", "tasso_alcolico": 0.30 },
+
+  { "nome": "jagermeister", "tasso_alcolico": 0.35 },
+
+  { "nome": "vermouth_rosso", "tasso_alcolico": 0.18 },
+  { "nome": "vermouth_bianco", "tasso_alcolico": 0.18 },
+
+  { "nome": "assenzio", "tasso_alcolico": 0.55 },
+  { "nome": "everclear", "tasso_alcolico": 0.95 },
+
+  { "nome": "cachaca", "tasso_alcolico": 0.40 },
+  { "nome": "soju", "tasso_alcolico": 0.20 },
+  { "nome": "sake", "tasso_alcolico": 0.15 }
+]

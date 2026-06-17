@@ -1,0 +1,40 @@
+[
+  { "nome": "vino_bianco_secco", "tasso_alcolico": 0.120 },
+  { "nome": "vino_bianco_aromatico", "tasso_alcolico": 0.115 },
+  { "nome": "vino_bianco_frisante", "tasso_alcolico": 0.110 },
+
+  { "nome": "vino_rosso_leggero", "tasso_alcolico": 0.115 },
+  { "nome": "vino_rosso_classico", "tasso_alcolico": 0.130 },
+  { "nome": "vino_rosso_strutturato", "tasso_alcolico": 0.140 },
+  { "nome": "vino_rosso_invecchiato", "tasso_alcolico": 0.145 },
+
+  { "nome": "vino_rose", "tasso_alcolico": 0.120 },
+
+  { "nome": "vino_dolce", "tasso_alcolico": 0.110 },
+  { "nome": "vino_passito", "tasso_alcolico": 0.140 },
+  { "nome": "vino_licoroso", "tasso_alcolico": 0.200 },
+
+  { "nome": "prosecco", "tasso_alcolico": 0.115 },
+  { "nome": "prosecco_docg", "tasso_alcolico": 0.120 },
+
+  { "nome": "spumante_brut", "tasso_alcolico": 0.120 },
+  { "nome": "spumante_extra_dry", "tasso_alcolico": 0.115 },
+  { "nome": "spumante_dry", "tasso_alcolico": 0.110 },
+
+  { "nome": "champagne_brut", "tasso_alcolico": 0.120 },
+  { "nome": "champagne_vintage", "tasso_alcolico": 0.125 },
+
+  { "nome": "cava", "tasso_alcolico": 0.115 },
+
+  { "nome": "franciacorta", "tasso_alcolico": 0.125 },
+
+  { "nome": "asti_spumante", "tasso_alcolico": 0.070 },
+  { "nome": "moscato_spumante", "tasso_alcolico": 0.075 },
+
+  { "nome": "vermouth_bianco", "tasso_alcolico": 0.180 },
+  { "nome": "vermouth_rosso", "tasso_alcolico": 0.180 },
+
+  { "nome": "porto", "tasso_alcolico": 0.200 },
+  { "nome": "sherry", "tasso_alcolico": 0.180 },
+  { "nome": "marsala", "tasso_alcolico": 0.180 }
+]

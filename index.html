@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatore Tasso Alcolico</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Stima il tuo tasso alcolemico</p>
+                <h1>Calcolo del Tasso Alcolico</h1>
+                <p>Inserisci peso e bevande consumate per una stima rapida e intuitiva.</p>
+            </div>
+            <div class="hero-graphic">
+                <div class="glass">
+                    <div class="liquid"></div>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="card">
+                <h2>Dati personali</h2>
+                <div class="form-grid">
+                    <label class="field">
+                        <span>Peso (kg)</span>
+                        <input id="weight" type="number" min="30" max="200" value="70">
+                    </label>
+                    <div class="field radio-group">
+                        <span>Sesso</span>
+                        <label><input type="radio" name="gender" value="male" checked> Uomo</label>
+                        <label><input type="radio" name="gender" value="female"> Donna</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Bevande consumate</h2>
+                <div class="drinks-input-section">
+                    <div class="form-grid">
+                        <label class="field">
+                            <span>Categoria</span>
+                            <select id="categorySelect">
+                                <option value="">-- Scegli una categoria --</option>
+                                <option value="vino">Vino</option>
+                                <option value="birra">Birra</option>
+                                <option value="drink">Drink</option>
+                                <option value="superalcolico">Superalcolico</option>
+                            </select>
+                        </label>
+                        <label class="field">
+                            <span>Bevanda</span>
+                            <select id="drinkSelect" disabled>
+                                <option value="">-- Seleziona categoria prima --</option>
+                            </select>
+                        </label>
+                    </div>
+                    <label class="field">
+                        <span>Quantità (ml)</span>
+                        <input id="quantityInput" type="number" min="0" max="1000" placeholder="es. 330">
+                    </label>
+                    <button id="addDrinkBtn" class="btn-add-drink">Aggiungi bevanda</button>
+                </div>
+                <div id="drinksList" class="drinks-list"></div>
+            </section>
+
+            <section class="card result-card">
+                <button id="calculate">Calcola</button>
+                <div class="result-panel">
+                    <div class="result-item">
+                        <span>Valore stimato</span>
+                        <strong id="bacValue">0.00 ‰</strong>
+                    </div>
+                    <p class="result-note" id="bacNote">Il risultato è una stima. Il valore effettivo dipende da molti
+                        fattori.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Nota: questo strumento fornisce solo una stima indicativa. Non sostituisce il giudizio professionale.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
